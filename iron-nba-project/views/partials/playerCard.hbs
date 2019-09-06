@@ -1,0 +1,11 @@
+{{!-- /views/partials/playerCard.hbs --}}
+
+<div class="card" style="width: 33.333%;">
+    <a href="/players/{{this.name}}">
+        <img class="card-img-top" src="{{this.photo}}" alt="">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}} {{this.lastName}}</h5>
+        <p class="card-text">{{this.team}}</p>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    {{!-- this is a comment --}}
+    {{escapedText}}
+
+    {{!-- if helper --}}
+    {{#if username}}
+    <h1>Hello {{name}}</h1>
+    Welcome
+    {{/if}}
+
+    {{!-- if else helper  --}}
+    {{#if username}}
+    <p>This will not show</p>
+    {{else}}
+    <p>This will show</p>
+    {{/if}}
+
+    {{!-- unless helper --}}
+    {{#unless username}}
+    <p>This shows if there is no `username` property</p>
+    {{/unless}}
+
+    {{!-- each helper --}}
+    {{#each cities}}
+    Something
+    {{!-- inside the block, {{this}} refers to the element that we are iterating --}}
+    {{this}}
+    {{/each}}
+    <ul>
+        {{#each lastName}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+
+</body>
+
+</html>

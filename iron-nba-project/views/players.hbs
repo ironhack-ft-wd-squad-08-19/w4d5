@@ -1,5 +1,17 @@
+<form action="/search" method="GET">
+    <label for="">q</label>
+    <input type="text" name="q" />
+    <label for="">other</label>
+    <input type="text" name="other" />
+    <button type="submit">Search</button>
+</form>
 <div class="cards-container">
+    {{#unless playersList}}
+    No player was found!
+    {{/unless}}
+
     {{#each playersList}}
     {{> playerCard this}}
     {{/each}}
+
 </div>

@@ -93,6 +93,8 @@ Place.updateOne(
 
 // Place.updateMany([])
 
+Place.update({ name: "Anfield Road" }, { name: "tutu" });
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
